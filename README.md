@@ -13,40 +13,8 @@ Library for displaying PDF documents on Android, with `animations`, `gestures`, 
 It is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for decoding PDF files. Works on API 11 (Android 3.0) and higher.
 Licensed under Apache License 2.0.
 
-## 3.2.4
-* Update [PdfiumAndroid library](https://github.com/lion1988dev/PdfiumAndroid) to 1.9.4
-
-
-## 3.2.3
-* Change minimum SDK version to 21
-* Update [PdfiumAndroid library](https://github.com/lion1988dev/PdfiumAndroid) to 1.9.3
-
-## 3.2.1
-* Change minimum SDK version to 23
-* Drop MIPS support
-* Update to Androidx
-* Switch pdfium-android to a [fork](https://github.com/lion1988dev/PdfiumAndroid) so we can disable jetifier
-
-## What's new in 3.2.0-beta.1?
-* Merge PR #714 with optimized page load
-* Merge PR #776 with fix for max & min zoom level
-* Merge PR #722 with fix for showing right position when view size changed
-* Merge PR #703 with fix for too many threads
-* Merge PR #702 with fix for memory leak
-* Merge PR #689 with possibility to disable long click
-* Merge PR #628 with fix for hiding scroll handle
-* Merge PR #627 with `fitEachPage` option
-* Merge PR #638 and #406 with fixed NPE
-* Merge PR #780 with README fix
-* Update compile SDK and support library to 28
-* Update Gradle and Gradle Plugin
-
-## Changes in 3.0 API
-* Replaced `Contants.PRELOAD_COUNT` with `PRELOAD_OFFSET`
-* Removed `PDFView#fitToWidth()` (variant without arguments)
-* Removed `Configurator#invalidPageColor(int)` method as invalid pages are not rendered
-* Removed page size parameters from `OnRenderListener#onInitiallyRendered(int)` method, as document may have different page sizes
-* Removed `PDFView#setSwipeVertical()` method
+## 4.0.0
+* Update [PdfiumAndroid library](https://github.com/marain87/PdfiumAndroid) to 1.9.8
 
 ## Installation
 

@@ -16,4 +16,3 @@ dependencyResolutionManagement {
 rootProject.name = "AndroidPdfViewer demo"
 
 include ':android-pdf-viewer'
-include ':sample'
