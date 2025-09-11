@@ -47,7 +47,7 @@ publishing {
     publications {
         release(MavenPublication) {
             groupId = 'com.github.martinkade'
-            artifactId = 'AndroidPdfViewer'
+            artifactId = 'android-pdf-viewer'
             version = "4.0.0"
 
             afterEvaluate {

@@ -13,6 +13,6 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "AndroidPdfViewer demo"
+rootProject.name = "android-pdf-viewer"
 
 include ':android-pdf-viewer'
