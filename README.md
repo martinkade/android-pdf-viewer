@@ -30,7 +30,7 @@ dependencyResolutionManagement {
 ```
 Add to the app _build.gradle_:
 
-`implementation 'com.github.lion1988dev:AndroidPdfViewer:3.2.3'`
+`implementation 'com.github.martinkade:AndroidPdfViewer:4.0.0'`
 
 ## ProGuard
 If you are using ProGuard, add following rule to proguard config file:
