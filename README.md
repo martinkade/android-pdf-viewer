@@ -13,7 +13,7 @@ Library for displaying PDF documents on Android, with `animations`, `gestures`, 
 It is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for decoding PDF files. Works on API 11 (Android 3.0) and higher.
 Licensed under Apache License 2.0.
 
-## 4.0.1
+## 4.0.2
 
 * Migrate to version catalog (libs.versions.toml)
 * Update build configuration
@@ -35,7 +35,7 @@ dependencyResolutionManagement {
 ```
 Add to the app _build.gradle_:
 
-`implementation 'com.github.martinkade:android-pdf-viewer:4.0.1'`
+`implementation 'com.github.martinkade:android-pdf-viewer:4.0.2'`
 
 ## ProGuard
 If you are using ProGuard, add following rule to proguard config file:
