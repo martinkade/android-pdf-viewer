@@ -53,9 +53,3 @@ publishing {
         }
     }
 }
-
-tasks.register('generateRepo') {
-    group = 'publishing'
-    description = 'Generates a local Maven repository'
-    dependsOn 'publishReleasePublicationToMyRepoRepository'
-}
