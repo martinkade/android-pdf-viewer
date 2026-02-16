@@ -1,0 +1,16 @@
+[versions]
+agp = "9.0.1"
+appcompat = "1.7.1"
+pdfium = "1.9.8"
+minSdk = "26"
+targetSdk = "36"
+compileSdk = "36"
+versionCode = "5"
+versionName = "4.0.1"
+
+[libraries]
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+pdfium-android = { group = "com.github.marain87", name = "PdfiumAndroid", version.ref = "pdfium" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }

@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.library'
+    alias(libs.plugins.android.library)
     id 'maven-publish'
 }
 
@@ -8,18 +8,17 @@ group "com.github.martinkade"
 android {
     namespace "com.github.barteksc.pdfviewer"
 
-    compileSdk rootProject.tools.compileSdk
+    compileSdk libs.versions.compileSdk.get().toInteger()
 
     defaultConfig {
-        minSdk rootProject.tools.minSdk
-        targetSdk rootProject.tools.targetSdk
-
+        minSdk libs.versions.minSdk.get().toInteger()
+        targetSdk libs.versions.targetSdk.get().toInteger()
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -29,18 +28,16 @@ android {
     }
 
     publishing {
-        publishing {
-            singleVariant("release") {
-                withSourcesJar()
-                withJavadocJar()
-            }
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.7.1'
-    api 'com.github.marain87:PdfiumAndroid:1.9.8'
+    implementation libs.androidx.appcompat
+    api libs.pdfium.android
 }
 
 publishing {
@@ -48,7 +45,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.martinkade'
             artifactId = 'android-pdf-viewer'
-            version = "4.0.0"
+            version = libs.versions.versionName.get()
 
             afterEvaluate {
                 from components.release

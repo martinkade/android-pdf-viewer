@@ -1,13 +1,3 @@
 plugins {
-    id 'com.android.library' version '8.13.0' apply false
-}
-
-ext {
-    tools = [
-            minSdk     : 21,
-            targetSdk  : 34,
-            compileSdk : 34,
-            versionCode: 4,
-            versionName: '4.0.0'
-    ]
+    alias(libs.plugins.android.library) apply false
 }
