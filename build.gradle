@@ -1,3 +1,18 @@
 plugins {
     alias(libs.plugins.android.library) apply false
 }
+
+evaluationDependsOn(':android-pdf-viewer')
+
+tasks.register('cleanBuildPublish') {
+    group = 'publishing'
+    description = 'Clean, build and publish the library'
+
+    def pdfProject = project(':android-pdf-viewer')
+    dependsOn pdfProject.tasks.clean
+    dependsOn pdfProject.tasks.build
+    dependsOn pdfProject.tasks.publish
+
+    pdfProject.tasks.build.mustRunAfter pdfProject.tasks.clean
+    pdfProject.tasks.publish.mustRunAfter pdfProject.tasks.build
+}
